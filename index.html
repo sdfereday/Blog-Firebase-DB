@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>MD Editor</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <link rel="stylesheet" type="text/css" href="site.css">
+</head>
+
+<body>
+    <form id="editor">
+        <p>
+            Post Title
+        </p>
+        <input class="editable title" data-bind="value: postTitle" type="text">
+        <p>
+            Post Content
+        </p>
+        <textarea class="editable content" data-bind="value: postBody"></textarea>
+        <button data-bind="click: savePost">
+            Save Post
+        </button>
+    </form>
+    <ul data-bind="foreach: posts">
+        <li>
+            <div class="post">
+                <p>
+                    <strong><span data-bind="text: title">...</span></strong>
+                </p>
+                <span class="date" data-bind="text: date">...</span>
+                <span data-bind="html: formattedBody">...</span>
+            </div>
+        </li>
+    </ul>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-debug.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.7.1/showdown.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

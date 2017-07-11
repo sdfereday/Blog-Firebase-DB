@@ -1,0 +1,58 @@
+html,
+body {
+  margin: 0;
+  padding: 1em;
+  font-family: "Lucida Sans Unicode";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+strong {
+  font-weight: 700;
+}
+
+#editor .editable {
+  padding: 1em;
+  width: 100%;
+  font-family: "Lucida Sans Unicode";
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18.5714px;
+  background: #333;
+  color: #fff;
+  border: 0;
+  &.title {
+    margin-bottom: 2em;
+  }
+  &.content {
+    margin-bottom: 2em;
+    min-height: 12em;
+  }
+}
+
+.post {
+  padding: 1em;
+  margin-bottom: 1em;
+  background: #eee;
+  border: 1px solid #ddd;
+  span {
+    display: block;
+    &.date {
+      font-weight: lighter;
+      font-style: italic;
+      font-size: 0.8em;
+      padding-bottom: 1em;
+    }
+  }
+}
